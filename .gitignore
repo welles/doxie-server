@@ -1,4 +1,5 @@
 /.idea/
+/.nuke/temp/
 
 bin/
 obj/
