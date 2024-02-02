@@ -28,6 +28,9 @@
     <Compile Update="Build.LogInfo.cs">
       <DependentUpon>Build.cs</DependentUpon>
     </Compile>
+    <Compile Update="Build.Docker.cs">
+      <DependentUpon>Build.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>

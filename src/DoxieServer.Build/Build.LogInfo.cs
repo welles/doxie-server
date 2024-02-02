@@ -7,5 +7,6 @@ public partial class Build
         {
             Serilog.Log.Information($"IsLocalBuild  = {IsLocalBuild}");
             Serilog.Log.Information($"Configuration = {Configuration}");
+            Serilog.Log.Information($"Dockerfile    = {Dockerfile}");
         });
 }
