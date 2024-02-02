@@ -1,4 +1,5 @@
 ﻿using Nuke.Common;
+using Nuke.Common.Tools.DotNet;
 
 public partial class Build
 {
@@ -6,5 +7,9 @@ public partial class Build
         .DependsOn(Restore)
         .Executes(() =>
         {
+            DotNetTasks.DotNetBuild(s =>
+                s.EnableNoRestore()
+                 .SetProjectFile(ApiProject)
+                 .SetConfiguration(Configuration));
         });
 }
