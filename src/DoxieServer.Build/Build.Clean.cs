@@ -6,6 +6,7 @@ public partial class Build
     Target Clean => d => d
         .Executes(() =>
         {
-            DotNetTasks.DotNetClean();
+            DotNetTasks.DotNetClean(s => s.SetProject(CoreProject));
+            DotNetTasks.DotNetClean(s => s.SetProject(ApiProject));
         });
 }

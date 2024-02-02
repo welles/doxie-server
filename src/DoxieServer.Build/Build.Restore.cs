@@ -1,4 +1,5 @@
 ﻿using Nuke.Common;
+using Nuke.Common.Tools.DotNet;
 
 public partial class Build
 {
@@ -6,5 +7,6 @@ public partial class Build
         .DependsOn(Clean)
         .Executes(() =>
         {
+            DotNetTasks.DotNetRestore();
         });
 }
