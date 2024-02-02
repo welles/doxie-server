@@ -1,9 +1,11 @@
 ﻿using System.Reflection;
 using DoxieServer.Core;
 using FastEndpoints;
+using JetBrains.Annotations;
 
 namespace DoxieServer.Api.Endpoints.Index;
 
+[PublicAPI]
 public class IndexEndpoint : EndpointWithoutRequest
 {
     public override void Configure()

@@ -11,6 +11,7 @@
 
     <ItemGroup>
       <PackageReference Include="FastEndpoints" Version="5.22.0" />
+      <PackageReference Include="JetBrains.Annotations" Version="2023.3.0" />
     </ItemGroup>
 
     <ItemGroup>
