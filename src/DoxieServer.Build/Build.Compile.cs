@@ -7,9 +7,9 @@ public partial class Build
         .DependsOn(Restore)
         .Executes(() =>
         {
-            DotNetTasks.DotNetBuild(s =>
-                s.EnableNoRestore()
-                 .SetProjectFile(ApiProject)
-                 .SetConfiguration(Configuration));
+            DotNetTasks.DotNetBuild(s => s
+                .EnableNoRestore()
+                .SetProjectFile(ApiProject)
+                .SetConfiguration(Configuration));
         });
 }
