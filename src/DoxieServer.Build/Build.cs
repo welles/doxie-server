@@ -1,5 +1,6 @@
 using Nuke.Common;
 using Nuke.Common.CI.GitHubActions;
+using Nuke.Common.Git;
 using Nuke.Common.ProjectModel;
 
 [GitHubActions(
@@ -19,10 +20,13 @@ public partial class Build : NukeBuild
 {
     public static int Main () => Execute<Build>(x => x.Compile);
 
-    [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
+    [Parameter]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
 
     GitHubActions GitHubActions => GitHubActions.Instance;
+
+    [GitRepository]
+    readonly GitRepository GitRepository;
 
     [Solution(GenerateProjects = true)]
     readonly Solution Solution;
