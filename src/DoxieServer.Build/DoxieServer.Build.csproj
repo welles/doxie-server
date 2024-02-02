@@ -15,4 +15,16 @@
     <PackageReference Include="Nuke.Common" Version="8.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Build.Clean.cs">
+      <DependentUpon>Build.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Build.Compile.cs">
+      <DependentUpon>Build.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Build.Restore.cs">
+      <DependentUpon>Build.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
 </Project>
