@@ -9,6 +9,9 @@ public partial class Build
         {
             DotNetTasks.DotNetBuild(s => s
                 .EnableNoRestore()
+                .SetVersion(MinVer.Version)
+                .SetAssemblyVersion(MinVer.AssemblyVersion)
+                .SetFileVersion(MinVer.FileVersion)
                 .SetProjectFile(ApiProject)
                 .SetConfiguration(Configuration));
         });

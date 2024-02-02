@@ -2,6 +2,7 @@ using Nuke.Common;
 using Nuke.Common.CI.GitHubActions;
 using Nuke.Common.Git;
 using Nuke.Common.ProjectModel;
+using Nuke.Common.Tools.MinVer;
 
 [GitHubActions(
     nameof(Build.Compile),
@@ -19,6 +20,9 @@ using Nuke.Common.ProjectModel;
 public partial class Build : NukeBuild
 {
     public static int Main () => Execute<Build>(x => x.Compile);
+
+    [MinVer]
+    readonly MinVer MinVer;
 
     [Parameter]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;

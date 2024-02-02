@@ -12,6 +12,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MinVer" Version="4.3.0" />
     <PackageReference Include="Nuke.Common" Version="8.0.0" />
   </ItemGroup>
 
@@ -31,6 +32,10 @@
     <Compile Update="Build.Docker.cs">
       <DependentUpon>Build.cs</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageDownload Include="minver-cli" Version="[4.3.0]" />
   </ItemGroup>
 
 </Project>
