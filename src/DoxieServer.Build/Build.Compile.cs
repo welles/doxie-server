@@ -12,6 +12,7 @@ public partial class Build
                 .SetVersion(MinVer.Version)
                 .SetAssemblyVersion(MinVer.AssemblyVersion)
                 .SetFileVersion(MinVer.FileVersion)
+                .SetInformationalVersion(MinVer.Version)
                 .SetProjectFile(ApiProject)
                 .SetConfiguration(Configuration));
         });

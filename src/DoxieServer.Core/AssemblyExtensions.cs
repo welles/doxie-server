@@ -8,7 +8,7 @@ public static class AssemblyExtensions
 {
     public static string GetVersion(this Assembly assembly)
     {
-        var version = assembly?.GetName().Version ?? new Version(0, 0, 0, 0);
+        var version = assembly?.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion;
 
         var sb = new StringBuilder("v");
         sb.Append(version);
