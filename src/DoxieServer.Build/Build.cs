@@ -29,7 +29,8 @@ using Nuke.Common.Tools.MinVer;
     InvokedTargets = new []
     {
         nameof(Build.DockerPushDev)
-    }
+    },
+    EnableGitHubToken = true
 )]
 public partial class Build : NukeBuild
 {
