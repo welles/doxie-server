@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using Nuke.Common;
 using Nuke.Common.CI.GitHubActions;
 using Nuke.Common.Git;
@@ -27,6 +28,7 @@ public partial class Build : NukeBuild
     [Parameter]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
 
+    [CanBeNull]
     GitHubActions GitHubActions => GitHubActions.Instance;
 
     [GitRepository]

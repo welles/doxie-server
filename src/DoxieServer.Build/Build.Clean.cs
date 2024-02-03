@@ -1,8 +1,10 @@
-﻿using Nuke.Common;
+﻿using JetBrains.Annotations;
+using Nuke.Common;
 using Nuke.Common.Tools.DotNet;
 
 public partial class Build
 {
+    [PublicAPI]
     Target Clean => d => d
         .DependsOn(LogInfo)
         .Executes(() =>
