@@ -11,7 +11,7 @@ public partial class Build
         .Executes(() =>
         {
             DockerTasks.DockerLogin(s => s
-                .SetServer(GitHubActions.ServerUrl)
+                .SetServer("https://ghcr.io")
                 .SetUsername(GitHubActions.RepositoryOwner)
                 .SetPassword(GitHubActions.Token));
         });

@@ -75,6 +75,7 @@
               "Compile",
               "DockerBuild",
               "DockerLogin",
+              "DockerPushDev",
               "LogInfo",
               "Restore"
             ]
@@ -94,6 +95,7 @@
               "Compile",
               "DockerBuild",
               "DockerLogin",
+              "DockerPushDev",
               "LogInfo",
               "Restore"
             ]

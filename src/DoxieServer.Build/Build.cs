@@ -18,6 +18,19 @@ using Nuke.Common.Tools.MinVer;
         nameof(Build.Compile)
     }
 )]
+[GitHubActions(
+    nameof(Build.DockerPushDev),
+    GitHubActionsImage.UbuntuLatest,
+    OnPushBranches = new[]
+    {
+        "*"
+    },
+    FetchDepth = 0,
+    InvokedTargets = new []
+    {
+        nameof(Build.DockerPushDev)
+    }
+)]
 public partial class Build : NukeBuild
 {
     public static int Main () => Execute<Build>(x => x.Compile);

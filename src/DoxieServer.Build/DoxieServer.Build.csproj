@@ -35,6 +35,9 @@
     <Compile Update="Build.DockerLogin.cs">
       <DependentUpon>Build.cs</DependentUpon>
     </Compile>
+    <Compile Update="Build.DockerPushDev.cs">
+      <DependentUpon>Build.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
