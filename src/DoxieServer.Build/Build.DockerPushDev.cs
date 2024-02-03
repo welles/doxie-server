@@ -11,6 +11,6 @@ public partial class Build
         .Executes(() =>
         {
             DockerTasks.DockerPush(s => s
-                .SetName("doxie-server"));
+                .SetName("doxie-server:dev"));
         });
 }
