@@ -2,5 +2,7 @@
 
 public static class EnvironmentVariables
 {
-    public const string TargetPath = "DOXIE_TARGET_PATH";
+    public const string LocalPathEnabled = "DOXIE_LOCAL_PATH_ENABLED";
+
+    public const string LocalPathTargetPath = "DOXIE_LOCAL_PATH_TARGET_PATH";
 }
