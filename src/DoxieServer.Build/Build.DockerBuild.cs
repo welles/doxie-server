@@ -14,9 +14,8 @@ public partial class Build
         {
             DockerTasks.DockerLogger = (_, e) => Serilog.Log.Information(e);
 
-            DockerTasks.DockerImageBuild(s =>
-                s.SetFile(Dockerfile)
-                 .SetPath(Solution.Directory)
-                 .SetTag(DockerImageName));
+            DockerTasks.DockerImageBuild(s => s
+                .SetPath(Solution.Directory)
+                .SetTag(DockerImageName));
         });
 }
