@@ -3,8 +3,7 @@ WORKDIR /app
 EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS restore
-WORKDIR /src
-COPY . .
+COPY /src /src
 WORKDIR /src/DoxieServer.Api
 RUN dotnet restore "DoxieServer.Api.csproj"
 
