@@ -30,7 +30,10 @@ using Nuke.Common.Tools.MinVer;
     {
         nameof(Build.DockerPushDev)
     },
-    EnableGitHubToken = true
+    EnableGitHubToken = true,
+    WritePermissions = new[] {
+        GitHubActionsPermissions.Packages
+    }
 )]
 public partial class Build : NukeBuild
 {
