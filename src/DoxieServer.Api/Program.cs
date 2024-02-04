@@ -12,4 +12,5 @@ builder.Services.AddSingleton<IEnvironmentService>(new EnvironmentService());
 
 var app = builder.Build();
 app.UseFastEndpoints();
+app.Urls.Add("http://[::]:80");
 app.Run();
