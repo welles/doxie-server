@@ -7,10 +7,7 @@ COPY /src /src
 WORKDIR /src/DoxieServer.Api
 RUN dotnet restore DoxieServer.Api.csproj
 
-FROM restore AS build
-RUN dotnet build DoxieServer.Api.csproj -c Release -o /app/build
-
-FROM build AS publish
+FROM restore AS publish
 ARG VERSION="0.0.0-dev.0"
 ARG ASSEMBLY_VERSION="0.0.0.0"
 ARG FILE_VERSION="0.0.0.0"
