@@ -15,7 +15,6 @@ public partial class Build
             DockerTasks.DockerBuild(s =>
                 s.SetFile(Dockerfile)
                  .SetPath(Solution.Directory)
-                 .SetLabel("doxie-server")
-                 .SetTag("dev"));
+                 .SetTag("doxie-server:dev"));
         });
 }
