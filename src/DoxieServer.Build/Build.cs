@@ -58,4 +58,6 @@ public partial class Build : NukeBuild
     Project CoreProject => Solution.DoxieServer_Core;
 
     Project ApiProject => Solution.DoxieServer_Api;
+
+    string DockerImageName => IsLocalBuild ? "doxie-server" : "ghcr.io/welles/doxie-server:dev";
 }

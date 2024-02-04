@@ -11,6 +11,6 @@ public partial class Build
         .Executes(() =>
         {
             DockerTasks.DockerPush(s => s
-                .SetName("ghcr.io/welles/doxie-server:dev"));
+                .SetName(DockerImageName));
         });
 }

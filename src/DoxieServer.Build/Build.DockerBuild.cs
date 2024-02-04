@@ -17,6 +17,6 @@ public partial class Build
             DockerTasks.DockerImageBuild(s =>
                 s.SetFile(Dockerfile)
                  .SetPath(Solution.Directory)
-                 .SetTag("ghcr.io/welles/doxie-server:dev"));
+                 .SetTag(DockerImageName));
         });
 }

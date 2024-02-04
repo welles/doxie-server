@@ -15,5 +15,6 @@ public partial class Build
             Serilog.Log.Information($"Dockerfile = {Dockerfile}");
             Serilog.Log.Information($"GitHubActions.RepositoryOwner = {GitHubActions?.RepositoryOwner}");
             Serilog.Log.Information($"GitHubActions.ServerUrl = {GitHubActions?.ServerUrl}");
+            Serilog.Log.Information($"DockerImageName = {DockerImageName}");
         });
 }
