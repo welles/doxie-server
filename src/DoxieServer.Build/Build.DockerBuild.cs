@@ -12,6 +12,8 @@ public partial class Build
         .DependsOn(Compile)
         .Executes(() =>
         {
+            DockerTasks.DockerLogger = (_, e) => Serilog.Log.Information(e);
+
             DockerTasks.DockerImageBuild(s =>
                 s.SetFile(Dockerfile)
                  .SetPath(Solution.Directory)
