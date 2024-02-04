@@ -31,11 +31,6 @@ using Nuke.Common.Tools.MinVer;
         nameof(Build.DockerPushDev)
     },
     EnableGitHubToken = true,
-    ReadPermissions = new []
-    {
-        GitHubActionsPermissions.Contents,
-        GitHubActionsPermissions.Packages
-    },
     WritePermissions = new[] {
         GitHubActionsPermissions.Contents,
         GitHubActionsPermissions.Packages
