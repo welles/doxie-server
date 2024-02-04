@@ -12,7 +12,7 @@ public partial class Build
         .DependsOn(Compile)
         .Executes(() =>
         {
-            DockerTasks.DockerBuild(s =>
+            DockerTasks.DockerImageBuild(s =>
                 s.SetFile(Dockerfile)
                  .SetPath(Solution.Directory)
                  .SetTag("doxie-server:dev"));
