@@ -15,6 +15,11 @@ public partial class Build
             DockerTasks.DockerLogger = (_, e) => Serilog.Log.Information(e);
 
             DockerTasks.DockerImageBuild(s => s
+                .SetBuildArg(
+                    $"VERSION=\"{MinVer.Version}\"",
+                    $"ASSEMBLY_VERSION=\"{MinVer.AssemblyVersion}\"",
+                    $"FILE_VERSION=\"{MinVer.FileVersion}\"",
+                    $"INFORMATIONAL_VERSION=\"{MinVer.Version}\"")
                 .SetPath(Solution.Directory)
                 .SetTag(DockerImageName));
         });
